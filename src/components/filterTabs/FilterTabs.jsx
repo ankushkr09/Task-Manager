@@ -24,7 +24,8 @@ const FilterTabs = () => {
           key={f}
           value={f}
           sx={{
-            textTransform: "none",
+            borderRadius: "8px",
+            height: '4vh',
             color: isDark ? "#CDCDCD" : "#333",
             borderColor: isDark ? "#444" : "#ccc",
             backgroundColor:

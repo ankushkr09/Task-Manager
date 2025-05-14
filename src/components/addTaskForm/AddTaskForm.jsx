@@ -7,12 +7,19 @@ const AddTaskForm = () => {
   const { addTask, theme } = useContext(TaskContext);
 
   const handleSubmit = (e) => {
-    alert("Empty task detected")
     e.preventDefault();
-    if (!input.trim()) return;
-    addTask(input.trim());
+  
+    const trimmedInput = input.trim();
+  
+    if (!trimmedInput) {
+      alert("Empty task detected");
+      return;
+    }
+  
+    addTask(trimmedInput);
     setInput("");
   };
+  
 
   const isDark = theme === "dark";
 
